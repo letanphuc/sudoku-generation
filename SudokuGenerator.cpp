@@ -10,7 +10,6 @@
 #include <iostream>
 #include <algorithm>
 #include <random>
-#include <chrono>
 #include <ctime>
 #include <map>
 #include <set>
@@ -20,7 +19,7 @@ class SudokuGenerator {
 public:
     explicit SudokuGenerator(const unsigned long sudokuSize) :
             size(sudokuSize) {
-        assert(size > 1 && size < 5);
+        assert(size >= 2 && size <= 4);
         std::random_device r;
         randomEngine = std::default_random_engine(r());
         udistribution = std::uniform_int_distribution<unsigned long>(0, size * size - 1);

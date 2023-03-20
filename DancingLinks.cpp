@@ -5,13 +5,12 @@
 //  Created by syt on 2023/3/20.
 //
 
-//#include <iostream>
 #include <vector>
 
 class DancingLinks {
 public:
     explicit DancingLinks(const std::vector<std::vector<bool>> &_matrix,  int _max_nodes) :
-            cols(_matrix[0].size()),
+            cols(int(_matrix[0].size())),
             data(std::vector<Node>(_max_nodes)),
             col_size(std::vector<int>(_matrix[0].size() + 1)),
             free_idx(cols + 1) {
@@ -62,7 +61,7 @@ private:
     }
 
     void _init_with_matrix(const std::vector<std::vector<bool>> &_matrix) {
-        int n = _matrix.size(), m = _matrix[0].size();
+        int n = int(_matrix.size()), m = int(_matrix[0].size());
         for (int i = n - 1; i >= 0; i --) {
             int head = free_idx, tail = free_idx;
             for (int j = 0; j < m; j ++) {

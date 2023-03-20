@@ -25,7 +25,7 @@ public:
         std::vector<std::vector<bool>> rec(cnt * (size - 1) + size * size, std::vector<bool>(size * size * 4));
         for (int i = 0; i < size; i ++) {
             for (int j = 0; j < size; j ++) {
-                int a = 0, b = size - 1;
+                int a = 0, b = int(size - 1);
                 if (board[i][j] != '.') {
                     if (board[i][j] >= 'A' && board[i][j] <= 'Z') a = b = board[i][j] - 'B' + 10;
                     else a = b = board[i][j] - '1';
@@ -42,7 +42,7 @@ public:
                 }
             }
         }
-        DancingLinks d(rec, size * size * size * 4);
+        DancingLinks d(rec, int(size * size * size * 4));
         d.solve();
         for (auto x : d.get_one_solution()) {
             if (pl[x] < 9) board[row[x]][col[x]] = pl[x] + '1';
