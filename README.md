@@ -8,9 +8,9 @@ generate 4x4, 9x9, 16x16 sudokus with a unique solution.
 ## Usage
 
 `SudokuGenerator(size).sudoku(removeCellCount, maxGenerationTime);`
-- where `size` can be 2, 3 and 4, which means 4x4, 9x9 and 16x16 sizes.
-- `removeCellCount` is the number of cells you want to remove, you can also specify `INT_MAX` directly if you want to remove as many cells as possible
-- `maxGenerationTime` indicates the maximum execution time of the generating program. If `maxGenerationTime` is reached without removing the specified `removeCellCount` cells, the program will return the result of removing as many cells as possible.
+- where `size` can be 2, 3, or 4, indicating a 4x4, 9x9, or 16x16 Sudoku size.
+- `removeCellCount` specifies the number of Sudoku cells to remove, and if you specify a large number, the program will remove as many cells as possible.
+- `maxGenerationTime` specifies the maximum time the program can use to generate the Sudoku. If the program reaches `maxGenerationTime` without removing the specified `removeCellCount` cells, it will return a Sudoku with as many cells removed as possible.
 
 
 ## Example
