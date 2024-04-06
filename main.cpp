@@ -6,7 +6,7 @@
 //
 
 #include <iostream>
-#include "SudokuGenerator.cpp"
+#include "SudokuGenerator.hpp"
 
 void print(const std::vector<std::vector<char>> &board) {
     const int size = sqrt(board.size());

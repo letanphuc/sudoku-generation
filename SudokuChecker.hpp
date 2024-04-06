@@ -8,7 +8,7 @@
 
 #include <vector>
 #include <cmath>
-#include "DancingLinks.cpp"
+#include "DancingLinks.hpp"
 
 class SudokuChecker {
 public:

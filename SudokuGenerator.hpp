@@ -5,7 +5,9 @@
 //  Created by syt on 2023/3/20.
 //
 
-#import "SudokuChecker.cpp"
+#pragma once
+
+#include "SudokuChecker.hpp"
 
 #include <iostream>
 #include <algorithm>
@@ -14,6 +16,7 @@
 #include <map>
 #include <set>
 #include <cmath>
+#include <cassert>
 
 class SudokuGenerator {
 public:
